@@ -1,18 +1,34 @@
-
+<script>
+	import Navigation from "../components/UI/Navigation.svelte";
+	import Footer from "../components/UI/Footer.svelte";
+	import HeroBanner from "../components/HeroBanner.svelte";
+	import About from "../components/About.svelte";
+	
+	function navigateTo(event) {
+		console.log(event.detail)
+	}
+</script>
 
 <svelte:head>
-	<title>Verdi Products</title>
+<title>Verdi Products</title>
 </svelte:head>
 
-<nav class="font-sans bg-white text-center flex justify-between my-4 mx-auto container overflow-hidden">
-	<a href="/" class="block text-left">
-		<img src="https://stitches.hyperyolo.com/images/logo.png" class="h-10 sm:h-10 rounded-full" alt="logo">
-	</a>
-	<ul class="text-sm text-gray-700 list-none p-0 flex items-center">
-		<li><a href="/" class="inline-block py-2 px-3 text-gray-900 hover:text-gray-700 no-underline">Om oss</a></li>
-		<li><a href="/" class="inline-block py-2 px-3 text-gray-900 hover:text-gray-700 no-underline">Produkter</a></li>
-		<li class="pr-2"><a href="/" class="inline-block py-2 px-3 text-gray-900 hover:text-gray-700 no-underline">Kunder</a></li>
-		<li class="pl-2 border-l"><a href="/" class="inline-block py-2 px-3 text-gray-900 hover:text-gray-700 no-underline">Kontakt</a></li>
-	</ul>
-</nav>
+<section id="navigation">
+	<Navigation on:navigate={navigateTo}/>
+</section>
 
+<section id="hero" class="h-screen">
+	<HeroBanner />
+</section>
+
+<section id="about-us">
+	<About />
+</section>
+
+<section id="products"></section>
+<section id="clients"></section>
+<section id="contact"></section>
+
+<section id="footer">
+	<Footer on:navigate={navigateTo}/>
+</section>
