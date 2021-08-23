@@ -3,6 +3,8 @@
 	import Footer from "../components/UI/Footer.svelte";
 	import HeroBanner from "../components/HeroBanner.svelte";
 	import About from "../components/About.svelte";
+	import Products from "../components/Products.svelte";
+	import Border from "../components/UI/Border.svelte";
 	
 	function navigateTo(event) {
 		console.log(event.detail)
@@ -25,7 +27,14 @@
 	<About />
 </section>
 
-<section id="products"></section>
+<Border />
+
+<section id="products">
+	<Products />
+</section>
+
+<Border />
+
 <section id="clients"></section>
 <section id="contact"></section>
 
