@@ -7,20 +7,20 @@
 	import Clients from "../components/Clients.svelte";
 	import Border from "../components/UI/Border.svelte";
 	import Contact from "../components/Contact.svelte";
-	import Modal from "../components/UI/Modal.svelte";
+	import ContactForm from "../components/Forms/ContactForm.svelte";
 	
-	let showModal = null;
-
+	let showContactForm = null;
+	
 	function navigateTo(event) {
 		console.log(event.detail)
 	}
-
-	function openModal() {
-		showModal = true;
+	
+	function openContactForm() {
+		showContactForm = true;
 	}
-
-	function closeModal() {
-		showModal = null;
+	
+	function closeContactForm() {
+		showContactForm = null;
 	}
 </script>
 
@@ -49,17 +49,17 @@
 <Border />
 
 <section id="clients">
-<Clients />
+	<Clients />
 </section>
 
 <section id="contact">
-<Contact on:click={openModal}/>
+	<Contact on:click={openContactForm}/>
 </section>
 
 <section id="footer">
 	<Footer on:navigate={navigateTo}/>
 </section>
 
-{#if showModal === true}
-	<Modal on:cancel={closeModal}>TEST</Modal>
+{#if showContactForm === true}
+<ContactForm rightBtnText="Skicka" leftBtnText="Avbryt" on:cancel={closeContactForm} />
 {/if}
