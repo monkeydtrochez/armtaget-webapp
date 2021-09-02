@@ -23,14 +23,14 @@
         dispatch('cancel');
     }
     
-    function submit() {
-        console.log("Submit form - not yet implemented...");
+    function submitForm() {
+        console.log("Submission is sent to netlify");
         dispatch('cancel');
     }
 </script>
 
 <Modal on:cancel>
-    <form class="w-full max-w-lg">
+    <form class="w-full max-w-lg" name="interest-submissions" data-netlify="true" method="POST" on:submit|preventDefault={submitForm} >
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <Input 
@@ -67,7 +67,7 @@
         </div>
     </form>
     <div slot="footer" class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-        <Button btnText={rightBtnText} disabled={!isFormValid} on:click={submit}/>
+        <Button btnText={rightBtnText} disabled={!isFormValid} on:click={submitForm}/>
         <Button btnText={leftBtnText} on:click={closeModal}/>
     </div>
 </Modal>
