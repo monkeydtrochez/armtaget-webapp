@@ -1,13 +1,7 @@
 <script>
-    import {createEventDispatcher} from "svelte";
     import Social from "./Social.svelte";
     import LogoImage from "../../../static/assets/verdi-logo-white.jpg"
-    
-    const dispatch = createEventDispatcher();
-    
-    function navigateTo(section) {
-        dispatch('navigate', section);
-    }
+
 </script>
 
 <footer class="font-sans bg-black text-white py-8 px-4 flex items-stretch">
@@ -16,10 +10,10 @@
             <li> <a href="/" class="block mr-4 w-32">
                 <img src="{LogoImage}" class="h-10 sm:h-20" alt="logo">
             </a></li>
-            <li><a href="/" class="inline-block py-2 px-3 text-gray-500 hover:text-gray-400 no-underline" on:click={navigateTo("about-us")} >Om oss</a></li>
-            <li><a href="/" class="inline-block py-2 px-3 text-gray-500 hover:text-gray-400 no-underline" on:click={navigateTo("products")} >Produkter</a></li>
-            <li><a href="/" class="inline-block py-2 px-3 text-gray-500 hover:text-gray-400 no-underline" on:click={navigateTo("clients")}>Kunder</a></li>
-            <li><a href="/" class="inline-block py-2 px-3 text-gray-500 hover:text-gray-400 no-underline" on:click={navigateTo("contact")}>Kontakt</a></li>
+            <li><a href="#about-us" class="inline-block py-2 px-3 text-gray-500 hover:text-gray-400 no-underline"  >Om oss</a></li>
+            <li><a href="#products" class="inline-block py-2 px-3 text-gray-500 hover:text-gray-400 no-underline"  >Produkter</a></li>
+            <li><a href="#clients" class="inline-block py-2 px-3 text-gray-500 hover:text-gray-400 no-underline" >Kunder</a></li>
+            <li><a href="#contact" class="inline-block py-2 px-3 text-gray-500 hover:text-gray-400 no-underline" >Kontakt</a></li>
         </ul>
         <p class="inline-block py-2 px-3 text-gray-700 text-xs"> ©2021 Verdi Products</p>
     </div>

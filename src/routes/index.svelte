@@ -24,6 +24,15 @@
 	}
 </script>
 
+<style>
+    .scroll-container {
+        /* width: 350px;
+        height: 200px;
+        overflow-y: scroll; */
+        scroll-behavior: smooth;
+    }
+</style>
+
 <svelte:head>
 <title>Verdi Products</title>
 </svelte:head>
