@@ -65,9 +65,13 @@
                 on:input={event => (emailAddress = event.target.value)} />
             </div>
         </div>
+        <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+            <Button btnType="submit" btnText={rightBtnText} disabled={!isFormValid} on:click={submitForm}/>
+            <Button btnText={leftBtnText} on:click={closeModal}/>
+        </div>
     </form>
-    <div slot="footer" class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+    <!-- <div slot="footer" class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
         <Button btnType="submit" btnText={rightBtnText} disabled={!isFormValid} on:click={submitForm}/>
         <Button btnText={leftBtnText} on:click={closeModal}/>
-    </div>
+    </div> -->
 </Modal>
