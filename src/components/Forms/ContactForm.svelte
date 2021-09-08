@@ -24,13 +24,31 @@
     }
     
     function submitForm() {
+        const newSubmission = {
+            "firstname": firstName,
+            "lastname": lastName,
+            "email": emailAddress
+        }
         console.log("Submission is sent to netlify");
+        fetch("/", {
+            method: 'POST',
+            body: JSON.stringify(newSubmission),
+            headers: {"Content-Type": "application/x-www-form-urlencoded"}
+        }).then(res => {
+            if(!res.ok) {
+                throw new Error("Something went wrong!");
+            }
+            console.log(res);
+        }).catch(err => {
+            console.log(err);
+        });
+        
         dispatch('cancel');
     }
 </script>
 
 <Modal on:cancel>
-    <form class="w-full max-w-lg" name="contact-form" data-netlify="true" method="POST" on:submit|preventDefault={submitForm} >
+    <form class="w-full max-w-lg" name="contact-form" netlify method="POST" on:submit|preventDefault={submitForm} >
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <Input 
