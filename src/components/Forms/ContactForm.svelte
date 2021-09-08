@@ -32,7 +32,7 @@
         console.log("Submission is sent to netlify");
         fetch("/", {
             method: 'POST',
-            body: JSON.stringify(newSubmission),
+            body: new URLSearchParams(newSubmission).toString(),
             headers: {"Content-Type": "application/x-www-form-urlencoded"}
         }).then(res => {
             console.log(res);
