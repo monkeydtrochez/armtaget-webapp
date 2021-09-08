@@ -24,15 +24,11 @@
     }
     
     function submitForm() {
-        const newSubmission = {
-            "firstname": firstName,
-            "lastname": lastName,
-            "email": emailAddress
-        }
-        console.log("Submission is sent to netlify");
+        let myForm = document.getElementById("contactForm");
+        let formData = new FormData(myForm);
         fetch("/", {
             method: 'POST',
-            body: new URLSearchParams(newSubmission).toString(),
+            body: new URLSearchParams(formData).toString(),
             headers: {"Content-Type": "application/x-www-form-urlencoded"}
         }).then(res => {
             console.log(res);
@@ -48,7 +44,7 @@
 </script>
 
 <Modal on:cancel>
-    <form class="w-full max-w-lg" name="contact-form" netlify method="POST" on:submit|preventDefault={submitForm} >
+    <form class="w-full max-w-lg" id="contactForm" name="contact-form" netlify method="POST" on:submit|preventDefault={submitForm} >
         <input type="hidden" name="form-name" value="contact-form" />
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
