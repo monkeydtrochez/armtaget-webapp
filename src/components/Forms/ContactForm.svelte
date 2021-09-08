@@ -35,10 +35,10 @@
             body: JSON.stringify(newSubmission),
             headers: {"Content-Type": "application/x-www-form-urlencoded"}
         }).then(res => {
-            if(!res.ok) {
-                throw new Error("Something went wrong!");
-            }
             console.log(res);
+            if(!res.ok) {
+                throw new Error("Something went wrong!", res);
+            }
         }).catch(err => {
             console.log(err);
         });
@@ -49,6 +49,7 @@
 
 <Modal on:cancel>
     <form class="w-full max-w-lg" name="contact-form" netlify method="POST" on:submit|preventDefault={submitForm} >
+        <input type="hidden" name="form-name" value="contact-form" />
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <Input 
