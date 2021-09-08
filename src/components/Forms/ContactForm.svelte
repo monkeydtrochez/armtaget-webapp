@@ -30,7 +30,7 @@
 </script>
 
 <Modal on:cancel>
-    <form class="w-full max-w-lg" name="interest-submissions" data-netlify="true" method="POST" on:submit|preventDefault={submitForm} >
+    <form class="w-full max-w-lg" name="contact-form" data-netlify="true" method="POST" on:submit|preventDefault={submitForm} >
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <Input 
@@ -65,13 +65,9 @@
                 on:input={event => (emailAddress = event.target.value)} />
             </div>
         </div>
-        <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-            <Button btnType="submit" btnText={rightBtnText} disabled={!isFormValid} on:click={submitForm}/>
-            <Button btnText={leftBtnText} on:click={closeModal}/>
-        </div>
     </form>
-    <!-- <div slot="footer" class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+    <div slot="footer" class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
         <Button btnType="submit" btnText={rightBtnText} disabled={!isFormValid} on:click={submitForm}/>
         <Button btnText={leftBtnText} on:click={closeModal}/>
-    </div> -->
+    </div>
 </Modal>

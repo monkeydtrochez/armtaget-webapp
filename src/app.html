@@ -10,6 +10,11 @@
 		%svelte.head%
 	</head>
 	<body>
+		<form name="contact-form" netlify netlify-honeypot="bot-field" action="/" hidden>
+		<input type="text" name="firstname"/>
+		<input type="text" name="lastname"/>
+		<input type="text" name="email"/>
+		</form>
 		<div id="svelte">%svelte.body%</div>
 	</body>
 </html>
