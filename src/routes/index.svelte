@@ -25,12 +25,9 @@
 </script>
 
 <style>
-    .scroll-container {
-        /* width: 350px;
-        height: 200px;
-        overflow-y: scroll; */
-        scroll-behavior: smooth;
-    }
+	:global(HTML) {
+		scroll-behavior: smooth;
+	}
 </style>
 
 <svelte:head>
@@ -64,6 +61,7 @@
 <section id="contact">
 	<Contact on:click={openContactForm}/>
 </section>
+
 
 <section id="footer">
 	<Footer on:navigate={navigateTo}/>
