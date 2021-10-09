@@ -9,7 +9,7 @@
 items-center justify-center h-48 md:h-64
 border-gray-300 border-r border-b hover:shadow-md hover:border-0 bg-white transition-normal hover:show-child">
 <div class="w-12 h-12 rounded-full">
-    <img src="{clientLogo}" alt="{altText}">
+    <img src="../../static/assets/clientAssets/{clientLogo}" alt="{altText}">
 </div>
 <h3 class="mt-4 mb-1 font-bold">{clientName}</h3>
 <p class="mt-4 text-center text-gray-700 leading-normal px-6 hidden hover:block">

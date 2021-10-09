@@ -8,7 +8,25 @@
 	import Border from "../components/UI/Border.svelte";
 	import Contact from "../components/Contact.svelte";
 	import ContactForm from "../components/Forms/ContactForm.svelte";
+	import clients from "../stores/clients-store";
+	import {onMount} from 'svelte';
 	
+	onMount(async () => {
+		await fetch('https://verdiproducts-by-monkey-default-rtdb.europe-west1.firebasedatabase.app/clients.json')
+		.then((result) => {
+			if(!result.ok){
+				throw new Error("Unable to fetch data from database");
+			}
+			return result.json();
+		})
+		.then(data => {
+			clients.setClients(data);
+		})
+		.catch((err) => {
+			console.log("Some error, ", err)
+		});
+	});
+
 	let showContactForm = null;
 	
 	function navigateTo(event) {

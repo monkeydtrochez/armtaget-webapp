@@ -2,7 +2,7 @@
 	export function load({ error, status }) {
 		return {
 			props: {
-				title: `${status}: ${error.message}`,
+				errorMessage: `${status}: ${error.message}`,
 				status: status
 			}
 		};
@@ -12,6 +12,8 @@
 <script>
 	import Button from "../components/UI/Button.svelte";
 	export let status;
+	export let errorMessage;
+	console.log(`Error: ${errorMessage}`)
 </script>
 
 <svelte:head>
