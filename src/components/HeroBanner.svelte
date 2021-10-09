@@ -2,6 +2,9 @@
     import HeroImage from "../../static/assets/verdi-hero-logo.jpg"
 </script>
 
-<div class="w-full h-full bg-no-repeat bg-cover bg-center bg-fixed"
-    style="background-image: url('{HeroImage}');">
+<div>
+    <video class="w-full" autoplay loop muted>
+        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
+        <track kind="captions">
+      </video>
 </div>
