@@ -56,7 +56,7 @@
 	<Navigation on:navigate={navigateTo}/>
 </section>
 
-<section id="hero" class="h-screen">
+<section id="hero">
 	<HeroBanner />
 </section>
 
