@@ -11,11 +11,11 @@
             </div>
             <div class="w-full lg:w-1/2 flex flex-col justify-center p-8 items-center lg:items-start">
                 <label for="tagline" class="uppercase tracking-wide text-gray-700 font-bold">Dags för nya tag - Armtag!</label>
-                <h1 class="my-4 font-normal">Armtaget, med sin enkla och smidiga konstruktion gör den lätt att installera själv eller med hjälp från oss.
+                <h1 class="my-4 font-normal">Armtaget, med sin enkla och smidiga konstruktion gör den enkel att installera själv eller med hjälp från oss.
                     Den har även visat sig vara mycket uppskattad hos handlare och deras kunder, vilket vi såklart är väldigt stolta över.
                 </h1>
                 <p class="leading-normal mb-4 text-gray-700">Armtagen är gjorda i Pteg, samma material som idag finns i PET-flaskor.
-                    Med andra ord så är våra armtag 100% förnybara och riktigt tåliga. Armtagen fästes enkelt med hjälp av våra 
+                    Med andra ord så är våra armtag 100% förnybara och riktigt tåliga. Armtagen fästes lätthet med hjälp av våra 
                     rostfria metallvinklar, som måttanpassas för att passa just era unika krav.
                 </p>
                 <p class="leading-normal mb-4 text-gray-700">
