@@ -9,7 +9,7 @@
             <div class="w-full lg:w-1/2">
                 <img src="{ProductImg}" alt="arm-tag" class="rounded-3xl">
             </div>
-            <div class="w-full lg:w-1/2 flex flex-col justify-center p-8 items-center lg:items-start">
+            <div class="w-full lg:w-1/2 flex flex-col justify-center p-8 md-tracking-wide items-center lg:items-start">
                 <label for="tagline" class="uppercase tracking-wide text-gray-700 font-bold">Dags för nya tag - Armtag!</label>
                 <h1 class="my-4 font-normal">Armtaget, med sin enkla och smidiga konstruktion gör den enkel att installera själv eller med hjälp från oss.
                     Den har även visat sig vara mycket uppskattad hos handlare och deras kunder, vilket vi såklart är väldigt stolta över.

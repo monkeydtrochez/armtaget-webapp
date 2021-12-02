@@ -1,6 +1,6 @@
 
 <div class="w-full flex justify-center mb-3">
-    <div class="w-6/12 text-gray-900 mt-6 md:mt-0 m-0 leading-normal">
+    <div class="w-6/12 text-gray-900 mt-6 leading-normal text-justify md-tracking-wide">
         <h4 class="py-8 uppercase font-bold tracking-wide">Om oss</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
             standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
