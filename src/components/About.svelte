@@ -6,7 +6,7 @@
 <div class="w-full flex justify-center mb-3">
     <div class="sm:w-4/12/12 md:w-6/12 lg:w-6/12 text-gray-900 mt-6 leading-normal text-center">
 
-        <video class="w-full rounded-3xl mb-4" autoplay loop controls>
+        <video class="w-full rounded-3xl mb-4" controls autoplay="autoplay" loop="true" muted>
             <source src="{campaignVideo}" type="video/mp4" />
             <source src="{campaignVideoMobile}" type="video/webm" />
             <track kind="captions">
