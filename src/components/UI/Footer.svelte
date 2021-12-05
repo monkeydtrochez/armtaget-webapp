@@ -6,7 +6,7 @@
 
 <footer class="font-sans bg-black text-white py-8 px-4">
     <div class="mx-auto max-w-xl flex justify-between">
-        <ul class="text-sm text-gray-700 list-none p-0">
+        <ul class="text-sm text-gray-700 list-none p-0 md:flex">
             <li> <a href="/" class="block mr-4">
                 <img src="{LogoImage}" class="h-10 sm:h-20" alt="logo">
             </a></li>

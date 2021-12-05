@@ -1,12 +1,20 @@
+<script>
+    import campaignVideo from "../../static/assets/video/campaign-video.mp4";
+    import campaignVideoMobile from "../../static/assets/video/campaign-video.webm";
+</script>
 
 <div class="w-full flex justify-center mb-3">
     <div class="sm:w-4/12/12 md:w-6/12 lg:w-6/12 text-gray-900 mt-6 leading-normal text-center">
+
+        <video class="w-full rounded-3xl mb-4" controls autoplay="autoplay" loop="true" muted>
+            <source src="{campaignVideo}" type="video/mp4" />
+            <source src="{campaignVideoMobile}" type="video/webm" />
+            <track kind="captions">
+            </video>
+
         <h4 class="py-8 uppercase font-bold tracking-wide">Om oss</h4>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-            a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-            of Lorem Ipsum.</p>
-    </div>
-</div>
+        <p>Konceptet Armtaget har legat och grott i idéstadiet en längre tid - nu under Covid-19 pandemin blev ideén äntligen till verklighet.
+            Vi alla vet att kunder tar i handtag för att plocka sina varor med eller utan handskar, till att sedan råka klia sig i ansiktet eller ta på sin telefon. Vi gör det ofta omedvetet och sprider på så sätt vidare både bakterier och virus.</p>
+            <p>Armtaget är ett steg i rätt riktning för en bättre hygienstandard i butiker. Syftet är helt enkelt att det ska vara smidigt för kunder att förstå och använda. Tillsammans med butikschefer och handlare samarbetar vi mot ett friskare samhälle som alla vinner på - öppet, ärligt och hälsosamt!</p>
+            </div>
+        </div>
