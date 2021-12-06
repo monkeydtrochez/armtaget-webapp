@@ -1,5 +1,5 @@
 <script>
-    import HeroImage from "../../static/assets/verdi-hero-logo.jpg"
+    import HeroImage from "../../static/assets/verdi-hero-logo_auto_x2.jpg"
 </script>
 
 <div class="w-full">
