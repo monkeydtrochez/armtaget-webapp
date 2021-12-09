@@ -14,8 +14,10 @@
             
             <h1 class="py-8 uppercase font-bold tracking-wide">Om oss</h1>
             <p class="mx-2">Konceptet Armtaget har legat och grott i idéstadiet en längre tid - nu under Covid-19 pandemin blev ideén äntligen till verklighet.
-                Vi alla vet att kunder tar i handtag för att plocka sina varor med eller utan handskar, till att sedan råka klia sig i ansiktet eller ta på sin telefon. Vi gör det ofta omedvetet och sprider på så sätt vidare både bakterier och virus.</p>
-                <p>Armtaget är ett steg i rätt riktning för en bättre hygienstandard i butiker. Syftet är helt enkelt att det ska vara smidigt för kunder att förstå och använda. Tillsammans med butikschefer och handlare samarbetar vi mot ett friskare samhälle som alla vinner på - öppet, ärligt och hälsosamt!</p>
+                Vi alla vet att kunder tar i handtag för att plocka sina varor med eller utan handskar, till att sedan råka klia sig i ansiktet eller ta på sin telefon. Vi gör det ofta omedvetet och sprider på så sätt vidare både bakterier och virus.
+                <br/>
+                Armtaget är ett steg i rätt riktning för en bättre hygienstandard i butiker. Syftet är helt enkelt att det ska vara smidigt för kunder att förstå och använda. Tillsammans med butikschefer och handlare samarbetar vi mot ett friskare samhälle som alla vinner på - öppet, ärligt och hälsosamt!
+            </p>
             </div>
         </div>
         
