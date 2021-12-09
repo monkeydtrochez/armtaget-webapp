@@ -12,7 +12,7 @@
             <track kind="captions">
             </video>
             
-            <h1 class="py-8 uppercase font-bold tracking-wide">Om oss</h1>
+            <h1 class="mb-4 uppercase font-bold tracking-wide">Om oss</h1>
             <p class="mx-2">Konceptet Armtaget har legat och grott i idéstadiet en längre tid - nu under Covid-19 pandemin blev ideén äntligen till verklighet.
                 Vi alla vet att kunder tar i handtag för att plocka sina varor med eller utan handskar, till att sedan råka klia sig i ansiktet eller ta på sin telefon. Vi gör det ofta omedvetet och sprider på så sätt vidare både bakterier och virus.
                 <br/>

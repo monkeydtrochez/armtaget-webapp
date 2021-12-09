@@ -5,15 +5,15 @@
 </script>
 
 <div class="w-full flex justify-center mb-3">
-    <div class="text-gray-900 mt-6 md:mt-0 m-0 sm:w-4/12/12 md:w-6/12 lg:w-6/12 leading-normal">
-        <h1 class="pt-2 pb-8 uppercase font-bold tracking-wide">Produkter</h1>
+    <div class="text-gray-900 md:mt-0 m-0 sm:w-4/12/12 md:w-6/12 lg:w-6/12 leading-normal">
+        <h1 class="pb-8 uppercase font-bold tracking-wide">Produkter</h1>
         <div class="my-0 font-sans">
             <div class="w-1/2 flex justify-between">
-                <img src="{ProductImg1}" alt="arm-tag" class="rounded-3xl">
-                <img src="{ProductImg2}" alt="arm-tag" class="mx4 rounded-3xl">
+                <img src="{ProductImg1}" alt="arm-tag" class="mr-px rounded-3xl">
+                <img src="{ProductImg2}" alt="arm-tag" class="ml-px rounded-3xl">
             </div>
             <div class="mt-4">
-                <h1 class="uppercase tracking-wide text-gray-700 font-bold">Dags för nya tag - Armtag!</h1>
+                <h1 class="uppercase tracking-wide mb-4 text-gray-700 font-bold">Dags för nya tag - Armtag!</h1>
                 <p class="leading-normal mb-4 mx-2 text-gray-700">
                     Armtaget, med sin enkla och smidiga konstruktion gör den lätt att installera själv eller med hjälp från oss.
                 <br/>

@@ -19,7 +19,7 @@
 
 {#if loadedClients.length !== 0}
 <div class="text-center">
-	<h1 class="py-4 font-bold uppercase tracking-wide">Kundernas upplevelser</h1>
+	<h1 class="font-bold uppercase tracking-wide">Kundernas upplevelser</h1>
 	<p class="leading-normal mb-4 max-w-sm m-auto">Se vad några utav våra nöjda kunder har att säga!</p>
 </div>
 <div class="flex flex-col sm:flex-row flex-wrap my-8">
