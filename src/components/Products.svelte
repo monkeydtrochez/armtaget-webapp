@@ -1,7 +1,7 @@
 <script>
     import ProductImg1 from "../../static/assets//products/produkt-bild-1.jpg";
     import ProductImg2 from "../../static/assets/products/produkt-bild-2.jpg";
-    import ProductImg3 from "../../static/assets/products/produkt-bild-3.jpg";
+    import ProductImg3 from "../../static/assets/products/new-product-image-3.jpg";
 </script>
 
 <div class="w-full flex justify-center mb-3">
