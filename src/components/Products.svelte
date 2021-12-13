@@ -8,7 +8,7 @@
     <div class="text-gray-900 md:mt-0 m-0 sm:w-4/12/12 md:w-6/12 lg:w-6/12 leading-normal">
         <h1 class="pb-8 uppercase font-bold tracking-wide">Produkter</h1>
         <div class="my-0 font-sans">
-            <div class="w-1/2 flex justify-between">
+            <div class="w-1/2 h-1/2 flex justify-between">
                 <img src="{ProductImg1}" alt="arm-tag" class="mr-px rounded-3xl">
                 <img src="{ProductImg2}" alt="arm-tag" class="ml-px rounded-3xl">
             </div>
