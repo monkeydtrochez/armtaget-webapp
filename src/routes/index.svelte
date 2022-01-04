@@ -10,11 +10,11 @@
 	import ContactForm from "../components/Forms/ContactForm.svelte";
 	import {initializeClients} from "../services/clientService";
 	import {initializeProducts} from "../services/productService";
-	//import { fetchStringValues } from "../services/stringValueService";
+	import { fetchStringValues } from "../services/stringValueService";
 	import {stringValues} from "../stores/strings-store";
 	import {onMount} from 'svelte';
 	import { initializeApp } from 'firebase/app';
-	import { getDatabase, ref, child, get } from "firebase/database";
+	import { getDatabase} from "firebase/database";
 	
 	// TODO move configs to beteer place some environment or config secrets
 	const firebaseConfig = {
@@ -34,34 +34,23 @@
 	onMount(async () => {
 		console.log("Initializing data")
 		try {
-			console.log("Initialize DB")
+
 			const database = getDatabase(app);
 			await initializeProducts(database);
 			await initializeClients(database);
-			await setStringValues(database);
+			await fetchStringValues(database).then((result) => {
+				$stringValues = result;
+			}).catch((error) => {
+				console.log(error);
+			})
 			
 		} catch	(error) {
 			console.log("Error occured: ", error);
 		};
 	});
 	
-	// TODO Gör denna metod i strinValueService istället och returnera alla stringValues.
-	async function setStringValues(database) {
-		const dbRef = ref(database);
-		await get(child(dbRef, 'productAreaTexts'))
-		.then((snapshot) => {
-			if(snapshot.exists()) {
-				const productAreaTexts = snapshot.val();
-				$stringValues = productAreaTexts;
-			}
-		})
-		.catch((error) => {
-			console.log("Error occured! ",  error);
-		});
-	}
-	
 	let showContactForm = null;
-
+	
 	function navigateTo(event) {
 		console.log(event.detail)
 	}
@@ -100,7 +89,7 @@
 <Border />
 
 <section id="products">
-	<Products productAreaTexts={$stringValues} />
+	<Products productAreaTexts={$stringValues.productAreaTexts} />
 </section>
 
 <Border />
