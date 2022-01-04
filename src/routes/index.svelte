@@ -8,13 +8,13 @@
 	import Border from "../components/UI/Border.svelte";
 	import Contact from "../components/Contact.svelte";
 	import ContactForm from "../components/Forms/ContactForm.svelte";
-	import {initializeClients} from "../services/clientService";
-	import {initializeProducts} from "../services/productService";
+	import { initializeClients } from "../services/clientService";
+	import { initializeProducts } from "../services/productService";
 	import { fetchStringValues } from "../services/stringValueService";
-	import {stringValues} from "../stores/strings-store";
-	import {onMount} from 'svelte';
+	import { stringValues } from "../stores/strings-store";
+	import { onMount } from 'svelte';
 	import { initializeApp } from 'firebase/app';
-	import { getDatabase} from "firebase/database";
+	import { getDatabase } from "firebase/database";
 	
 	// TODO move configs to beteer place some environment or config secrets
 	const firebaseConfig = {
@@ -40,6 +40,7 @@
 			await initializeClients(database);
 			await fetchStringValues(database).then((result) => {
 				$stringValues = result;
+				console.log($stringValues);
 			}).catch((error) => {
 				console.log(error);
 			})
