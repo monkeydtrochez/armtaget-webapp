@@ -40,7 +40,6 @@
 			await initializeClients(database);
 			await fetchStringValues(database).then((result) => {
 				$stringValues = result;
-				console.log($stringValues);
 			}).catch((error) => {
 				console.log(error);
 			})
