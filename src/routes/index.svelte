@@ -15,26 +15,15 @@
 	import { onMount } from 'svelte';
 	import { initializeApp } from 'firebase/app';
 	import { getDatabase } from "firebase/database";
+	import { getVariables } from "../helpers/environmentVariables";
 	
-	// TODO move configs to beteer place some environment or config secrets
-	const firebaseConfig = {
-		apiKey: "AIzaSyDiZsYKi_Fy2rYyCS72EgDmc-x8fWHyRIk",
-		authDomain: "verdiproducts-by-monkey.firebaseapp.com",
-		databaseURL: "https://verdiproducts-by-monkey-default-rtdb.europe-west1.firebasedatabase.app",
-		projectId: "verdiproducts-by-monkey",
-		storageBucket: "verdiproducts-by-monkey.appspot.com",
-		messagingSenderId: "899554036662",
-		appId: "1:899554036662:web:9c2206c0a14e6b8e1a0f17",
-		measurementId: "G-0G2JC6PHRH"
-	};
-	
+	const firebaseConfig = getVariables();
 	console.log("Initialize app")
 	const app = initializeApp(firebaseConfig);
 	
 	onMount(async () => {
 		console.log("Initializing data")
 		try {
-
 			const database = getDatabase(app);
 			await initializeProducts(database);
 			await initializeClients(database);
