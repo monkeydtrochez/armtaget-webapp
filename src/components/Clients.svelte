@@ -3,6 +3,7 @@
 	import clientStore from "../stores/clients-store";
 	import {onDestroy} from 'svelte';
 	
+	export let clientAreaTexts = {};
 	let loadedClients;
 	let unsubscribe;
 	
@@ -19,8 +20,8 @@
 
 {#if loadedClients.length !== 0}
 <div class="text-center">
-	<h1 class="font-bold uppercase tracking-wide">Kundernas upplevelser</h1>
-	<p class="leading-normal mb-4 max-w-sm m-auto">Se vad några utav våra nöjda kunder har att säga!</p>
+	<h1 class="font-bold uppercase tracking-wide">{clientAreaTexts.title}</h1>
+	<p class="leading-normal mb-4 max-w-sm m-auto">{clientAreaTexts.intro}</p>
 </div>
 <div class="flex flex-col sm:flex-row flex-wrap my-8">
 	{#each loadedClients as item}

@@ -29,6 +29,7 @@
 			await initializeClients(database);
 			await fetchStringValues(database).then((result) => {
 				$stringValues = result;
+				console.log(result);
 			}).catch((error) => {
 				console.log(error);
 			})
@@ -72,7 +73,7 @@
 </section>
 
 <section id="about-us">
-	<About />
+	<About aboutAreaTexts={$stringValues.aboutAreaTexts}/>
 </section>
 
 <Border />
@@ -84,11 +85,11 @@
 <Border />
 
 <section id="clients">
-	<Clients />
+	<Clients clientAreaTexts={$stringValues.clientAreaTexts}/>
 </section>
 
 <section id="contact">
-	<Contact on:click={openContactForm}/>
+	<Contact contactAreaTexts={$stringValues.contactAreaTexts} on:click={openContactForm}/>
 </section>
 
 
