@@ -25,6 +25,7 @@
 	},
 	"dependencies": {
 		"del-cli": "^4.0.1",
+		"firebase": "^9.6.1",
 		"move-cli": "^1.2.1",
 		"svelte-preprocess": "^4.7.4"
 	},

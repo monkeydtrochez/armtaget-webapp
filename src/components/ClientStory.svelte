@@ -12,9 +12,9 @@ border-gray-300 border-r border-b hover:shadow-md hover:border-0 bg-white transi
     <img src="../../../assets/clientAssets/{clientLogo}" alt="{altText}">
 </div>
 <h3 class="pb-8 mt-4 font-bold">{clientName}</h3>
-<p class="mt-4 text-center text-sm text-gray-700 leading-loose px-6 hidden hover:block">
-    {#if clientReview}
-    <span class="text-2xl italic">"</span>{clientReview}<span class="text-2xl italic">"</span>
-    {/if}
+{#if clientReview}
+<p class="mt-4 text-center text-sm text-gray-700 leading-5 px-6 hidden hover:block">
+    {clientReview}
 </p>
+{/if}
 </div>

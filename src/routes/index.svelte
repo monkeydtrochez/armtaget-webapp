@@ -8,25 +8,37 @@
 	import Border from "../components/UI/Border.svelte";
 	import Contact from "../components/Contact.svelte";
 	import ContactForm from "../components/Forms/ContactForm.svelte";
-	import clients from "../stores/clients-store";
-	import {onMount} from 'svelte';
+	import { initializeClients } from "../services/clientService";
+	import { initializeProducts } from "../services/productService";
+	import { fetchStringValues } from "../services/stringValueService";
+	import { stringValues } from "../stores/strings-store";
+	import { onMount } from 'svelte';
+	import { initializeApp } from 'firebase/app';
+	import { getDatabase } from "firebase/database";
+	import { getVariables } from "../helpers/environmentVariables";
+	
+	const firebaseConfig = getVariables();
+	console.log("Initialize app")
+	const app = initializeApp(firebaseConfig);
 	
 	onMount(async () => {
-		await fetch('https://verdiproducts-by-monkey-default-rtdb.europe-west1.firebasedatabase.app/clients.json')
-		.then((result) => {
-			if(!result.ok){
-				throw new Error("Unable to fetch data from database");
-			}
-			return result.json();
-		})
-		.then(data => {
-			clients.setClients(data);
-		})
-		.catch((err) => {
-			console.log("Some error, ", err)
-		});
+		console.log("Initializing data")
+		try {
+			const database = getDatabase(app);
+			await initializeProducts(database);
+			await initializeClients(database);
+			await fetchStringValues(database).then((result) => {
+				$stringValues = result;
+				console.log(result);
+			}).catch((error) => {
+				console.log(error);
+			})
+			
+		} catch	(error) {
+			console.log("Error occured: ", error);
+		};
 	});
-
+	
 	let showContactForm = null;
 	
 	function navigateTo(event) {
@@ -61,23 +73,23 @@
 </section>
 
 <section id="about-us">
-	<About />
+	<About aboutAreaTexts={$stringValues.aboutAreaTexts}/>
 </section>
 
 <Border />
 
 <section id="products">
-	<Products />
+	<Products productAreaTexts={$stringValues.productAreaTexts} />
 </section>
 
 <Border />
 
 <section id="clients">
-	<Clients />
+	<Clients clientAreaTexts={$stringValues.clientAreaTexts}/>
 </section>
 
 <section id="contact">
-	<Contact on:click={openContactForm}/>
+	<Contact contactAreaTexts={$stringValues.contactAreaTexts} on:click={openContactForm}/>
 </section>
 
 
