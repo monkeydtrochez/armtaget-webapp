@@ -29,7 +29,6 @@
 			await initializeClients(database);
 			await fetchStringValues(database).then((result) => {
 				$stringValues = result;
-				console.log(result);
 			}).catch((error) => {
 				console.log(error);
 			})
